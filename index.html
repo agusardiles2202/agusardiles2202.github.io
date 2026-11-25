@@ -1,249 +1,156 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-AR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agustina Ardiles — Ingeniería en Sistemas &amp; Desarrollo de Software</title>
-  <meta name="description" content="Portafolio de Agustina Ardiles, estudiante de 4.º año de Ingeniería en Sistemas (UTN FRC). Proyectos en Microservicios Java/Spring Boot, Python/Arquitectura de Objetos e Inteligencia Artificial con LangGraph y RAG.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ee">
+  <meta name="description" content="Agustina Ardiles, estudiante de Ingeniería en Sistemas de Información en UTN FRC. Proyectos de backend, arquitectura de software e inteligencia artificial aplicada.">
+  <meta property="og:title" content="Agustina Ardiles · Portafolio">
+  <meta property="og:description" content="Proyectos de backend, arquitectura de software e inteligencia artificial aplicada.">
+  <title>Agustina Ardiles · Ingeniería en Sistemas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-
-  <!-- Navigation -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="site-header">
-    <div class="container nav-inner">
-      <a href="#inicio" class="brand">
-        <span class="brand-mark">AA</span>
-        <span class="brand-name">Agustina Ardiles</span>
-      </a>
-      <nav class="nav-links" aria-label="Navegación principal">
+    <div class="shell header-row">
+      <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">aa<span>.</span></span><span>Agustina Ardiles</span></a>
+      <nav aria-label="Navegación principal">
         <a href="#proyectos">Proyectos</a>
-        <a href="#tecnologias">Tecnologías</a>
-        <a href="#formacion">Formación</a>
+        <a href="#sobre-mi">Sobre mí</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <div class="nav-actions">
-        <button type="button" class="btn btn-ghost btn-sm" id="openCvBtn">Ver CV</button>
-        <a href="assets/CV_Agustina_Ardiles.pdf" download="CV_Agustina_Ardiles.pdf" class="btn btn-primary btn-sm">Descargar PDF</a>
-      </div>
+      <a class="button button-small button-outline header-cv" href="assets/CV_Agustina_Ardiles.pdf">Ver CV <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section id="inicio" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="status-pill">
-            <span class="status-dot" aria-hidden="true"></span>
-            UTN FRC · 4.º año de Ingeniería en Sistemas · Córdoba, Argentina
-          </div>
-          <h1>Diseño sistemas backend, arquitectura limpia y aplicaciones con IA aplicada.</h1>
-          <p class="hero-lead">
-            Soy <strong>Agustina Ardiles</strong> (29 materias aprobadas en Ingeniería en Sistemas). Construyo software con foco en trazabilidad de negocio, seguridad y persistencia: desde microservicios en <strong>Java 21 + Spring Boot + Docker</strong> hasta agentes conversacionales con memoria vectorial en <strong>Python + LangGraph + ChromaDB</strong>.
-          </p>
-          <div class="hero-cta">
-            <a href="#proyectos" class="btn btn-primary">Explorar proyectos interactivos</a>
-            <a href="https://github.com/agusardiles2202" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
-            <a href="https://www.linkedin.com/in/agustina-ardiles-183718378" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
-          </div>
-          <dl class="hero-facts">
-            <div>
-              <dt>3 sistemas completos</dt>
-              <dd>IA / RAG, Arquitectura POO y Microservicios</dd>
-            </div>
-            <div>
-              <dt>181 tests automatizados</dt>
-              <dd>Cobertura unitaria e integración en Pytest</dd>
-            </div>
-            <div>
-              <dt>Inglés B2 (FCE)</dt>
-              <dd>Certificación Cambridge English</dd>
-            </div>
-          </dl>
+  <main id="contenido">
+    <section id="inicio" class="shell hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="signal" aria-hidden="true"></span> Estudiante de Ingeniería en Sistemas · UTN FRC</p>
+        <h1>Agustina<br>Ardiles<span>.</span></h1>
+        <p class="hero-description">Me enfoco en desarrollo backend y arquitectura de software. Trabajo con Java y Python, y exploro cómo aplicar IA a productos de software.</p>
+        <div class="actions">
+          <a class="button button-primary" href="#proyectos">Explorar proyectos <span aria-hidden="true">↓</span></a>
+          <a class="button button-outline" href="https://github.com/agusardiles2202">GitHub <span aria-hidden="true">↗</span></a>
         </div>
-
-        <aside class="hero-profile">
-          <div class="profile-card">
-            <div class="profile-photo-wrap">
-              <img src="assets/agustina.jpg" alt="Agustina Ardiles" class="profile-photo">
-            </div>
-            <div class="profile-meta">
-              <h2>Agustina Ardiles</h2>
-              <p>Futura Ingeniera en Sistemas de Información</p>
-              <div class="profile-links">
-                <a href="mailto:agusardiles2202@gmail.com?subject=Contacto%20desde%20tu%20portafolio" class="copy-email-btn mailto-link" id="copyEmailHero">
-                  agusardiles2202@gmail.com <span class="copy-tag">✉ Mail</span>
-                </a>
-              </div>
-              <div class="profile-focus">
-                <span>Backend Java &amp; Python</span>
-                <span>Microservicios &amp; Docker</span>
-                <span>Agentes IA &amp; RAG</span>
-              </div>
-            </div>
-          </div>
-        </aside>
       </div>
+      <figure class="portrait">
+        <div class="portrait-frame">
+          <img src="assets/agustina.jpg" alt="Retrato de Agustina Ardiles" width="400" height="512" fetchpriority="high">
+        </div>
+        <figcaption>Córdoba, Argentina</figcaption>
+      </figure>
     </section>
 
-    <!-- Interactive Architecture & Project Workbench -->
-    <section id="proyectos" class="workbench-section">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Proyectos &amp; Laboratorio de Arquitectura</h2>
-            <p class="section-sub">Seleccioná un sistema para revisar qué problema resuelve, su stack real y probar su flujo de funcionamiento en vivo.</p>
-          </div>
-          <div class="project-tabs" role="tablist" aria-label="Selector de proyectos">
-            <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-project="chat">
-              Chat IA con Memoria
-            </button>
-            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-project="logistica">
-              Gestión de Locales y POS
-            </button>
-            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-project="microservicios">
-              Transporte de Contenedores
-            </button>
-          </div>
+    <section id="proyectos" class="projects">
+      <div class="shell">
+        <div class="section-heading">
+          <h2>Proyectos</h2>
+          <p>Qué problema resuelve cada proyecto, cómo está construido y cómo se ve al usarlo.</p>
         </div>
+        <article class="project featured">
+          <div class="project-copy">
+            <p class="eyebrow project-type">Aplicación de escritorio</p>
+            <h3>Inventario, logística y punto de venta</h3>
+            <p>Gestiona el recorrido de la mercadería entre el centro de distribución y las sucursales, desde la reposición hasta la venta y las devoluciones.</p>
+            <p class="detail">Registra el estado del stock y rechaza bultos con precinto violado. Incluye 181 pruebas automatizadas.</p>
+            <ul class="tags" aria-label="Tecnologías"><li>Python</li><li>Tkinter</li><li>SQLite</li><li>Pytest</li></ul>
+            <a class="project-link" href="https://github.com/agusardiles2202/aplicacion-logistica">Ver repositorio <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="project-media media-inventory">
+            <a class="media-link" href="assets/inventario.webp" data-title="Inventario, logística y punto de venta" aria-label="Ampliar captura de logística e inventario">
+              <img src="assets/inventario.webp" alt="Panel de inicio de la aplicación de escritorio con indicadores de ventas, alertas de stock y accesos a las operaciones logísticas" width="1440" height="960" loading="lazy">
+              <span class="expand-icon" aria-hidden="true">⤢</span>
+            </a>
+            <figcaption>Captura de la aplicación con datos de prueba.</figcaption>
+          </figure>
+        </article>
 
-        <div class="workbench-grid">
-          <!-- Left: Project Details -->
-          <article class="project-detail-card" id="projectDetailPanel">
-            <!-- Populated dynamically by app.js -->
+        <div class="project-grid">
+          <article class="project">
+            <figure class="project-media media-chat">
+              <a class="media-link" href="assets/chat.webp" data-title="Asistente multiusuario con memoria semántica" aria-label="Ampliar captura del chat multiusuario">
+                <img src="assets/chat.webp" alt="Interfaz en Streamlit con la conversación y el historial del usuario de demostración" width="1440" height="900" loading="lazy">
+                <span class="expand-icon" aria-hidden="true">⤢</span>
+              </a>
+              <figcaption>Interfaz real de Streamlit con una conversación de ejemplo.</figcaption>
+            </figure>
+            <div class="project-copy">
+              <p class="eyebrow project-type">Inteligencia artificial aplicada</p>
+              <h3>Asistente multiusuario con memoria semántica</h3>
+              <p>Asistente que conserva el historial de cada usuario y recupera recuerdos relevantes para dar contexto a nuevas conversaciones.</p>
+              <ul class="tags" aria-label="Tecnologías"><li>Python</li><li>LangGraph</li><li>ChromaDB</li><li>Streamlit</li></ul>
+              <a class="project-link" href="https://github.com/agusardiles2202/chat_multiusuario_con_memoria">Ver repositorio <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
-
-          <!-- Right: Interactive Lab -->
-          <div class="lab-shell" id="interactiveLab">
-            <!-- Populated dynamically by app.js -->
-          </div>
+          <article class="project">
+            <figure class="project-media media-api">
+              <a class="media-link" href="assets/api.webp" data-title="API de transporte de contenedores" aria-label="Ampliar captura de Swagger UI">
+                <img src="assets/api.webp" alt="Swagger UI del servicio de solicitudes de transporte, con los endpoints disponibles" width="1440" height="900" loading="lazy">
+                <span class="expand-icon" aria-hidden="true">⤢</span>
+              </a>
+              <figcaption>Swagger UI del servicio de solicitudes.</figcaption>
+            </figure>
+            <div class="project-copy">
+              <p class="eyebrow project-type">Backend distribuido</p>
+              <h3>API de transporte de contenedores</h3>
+              <p>Backend para gestionar traslados de contenedores, calcular rutas y tarifas y controlar el acceso por roles desde un API Gateway.</p>
+              <ul class="tags" aria-label="Tecnologías"><li>Java 21</li><li>Spring Boot</li><li>Keycloak</li><li>Docker</li></ul>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/agusardiles2202/plataforma-logistica-microservicios">Ver repositorio <span aria-hidden="true">↗</span></a>
+                <a class="project-link secondary-link" href="assets/diagrama_contenedores.jpg" data-title="Diagrama de microservicios">Ver arquitectura <span aria-hidden="true">⤢</span></a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Tech Stack Explorer -->
-    <section id="tecnologias" class="stack-section">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Stack Tecnológico</h2>
-            <p class="section-sub">Herramientas, frameworks y estándares aplicados en mis desarrollos.</p>
-          </div>
-          <div class="filter-group" role="group" aria-label="Filtrar tecnologías">
-            <button type="button" class="filter-btn active" data-filter="all">Todas</button>
-            <button type="button" class="filter-btn" data-filter="backend">Backend &amp; Arquitectura</button>
-            <button type="button" class="filter-btn" data-filter="ia">IA &amp; Datos</button>
-            <button type="button" class="filter-btn" data-filter="infra">Seguridad, DB &amp; Testing</button>
-            <button type="button" class="filter-btn" data-filter="frontend">Frontend</button>
-          </div>
-        </div>
-
-        <div class="stack-grid" id="stackGrid">
-          <!-- Populated by app.js -->
-        </div>
+    <section id="sobre-mi" class="shell about">
+      <div class="about-copy">
+        <h2>Sobre mí</h2>
+        <p>Soy Agustina, estudiante de cuarto año de Ingeniería en Sistemas de Información en la UTN, Facultad Regional Córdoba. Empecé la carrera en 2023 y tengo 29 materias aprobadas. Me interesa especialmente el desarrollo backend y cómo organizar el código para que sea fácil de entender, mantener y probar.</p>
+        <p>En mis proyectos de la carrera trabajé con reglas concretas, como separar el stock disponible del que está en tránsito o calcular el costo de trasladar un contenedor. También exploré la IA aplicada al desarrollar un asistente que conserva el contexto de cada usuario entre conversaciones.</p>
+        <p><strong>Busco mi primera oportunidad profesional en desarrollo de software.</strong> Me gustaría sumarme a un equipo donde pueda aportar a proyectos de backend, compartir lo que aprendo y seguir creciendo con la experiencia de otras personas.</p>
       </div>
+      <dl class="profile-details">
+        <div id="formacion"><dt>Formación</dt><dd>Ingeniería en Sistemas de Información · UTN FRC</dd></div>
+        <div id="tecnologias"><dt>Backend y datos</dt><dd>Java, Spring Boot, Python, PostgreSQL, SQLite y Docker</dd></div>
+        <div><dt>IA aplicada</dt><dd>LangChain, LangGraph y ChromaDB</dd></div>
+        <div><dt>Cursos</dt><dd>Python Avanzado y agentes de IA con LangChain y LangGraph · Udemy</dd></div>
+        <div><dt>Inglés</dt><dd>B2 · Cambridge First Certificate</dd></div>
+      </dl>
     </section>
 
-    <!-- Education & Certifications -->
-    <section id="formacion" class="credentials-section">
-      <div class="container credentials-grid">
-        <div class="credential-col">
-          <h2>Formación Académica</h2>
-          <div class="timeline-card">
-            <div class="timeline-top">
-              <h3>Ingeniería en Sistemas de Información</h3>
-              <span class="date-badge">2023 – Presente</span>
-            </div>
-            <p class="org-name">Universidad Tecnológica Nacional — Facultad Regional Córdoba (UTN FRC)</p>
-            <p class="cred-body">
-              Cursando <strong>4.º año</strong> con <strong>29 materias aprobadas</strong>. Sólida base en algoritmos, estructuras de datos, diseño y arquitectura de objetos, bases de datos relacionales, ingeniería de software y redes.
-            </p>
-          </div>
-        </div>
-
-        <div class="credential-col">
-          <h2>Certificaciones &amp; Idiomas</h2>
-          <div class="cert-list">
-            <div class="cert-item">
-              <div class="timeline-top">
-                <h3>LangChain, LangGraph y Agentes IA con Python</h3>
-                <span class="date-badge">Udemy · 2026</span>
-              </div>
-              <p class="cred-body">Sistemas RAG con ChromaDB, agentes autónomos, memoria persistente y modelos OpenAI / Google Gemini.</p>
-            </div>
-            <div class="cert-item">
-              <div class="timeline-top">
-                <h3>Curso de Python Avanzado</h3>
-                <span class="date-badge">Udemy · 2025</span>
-              </div>
-              <p class="cred-body">Programación orientada a objetos, estructuras avanzadas y buenas prácticas de desarrollo.</p>
-            </div>
-            <div class="cert-item">
-              <div class="timeline-top">
-                <h3>First Certificate in English (FCE — Nivel B2)</h3>
-                <span class="date-badge">Cambridge · 2021</span>
-              </div>
-              <p class="cred-body">Lectura fluida de documentación técnica, redacción y comunicación profesional en inglés.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact CTA -->
-    <section id="contacto" class="contact-section">
-      <div class="container contact-box">
+    <section id="contacto" class="contact">
+      <div class="shell contact-row">
         <div>
-          <h2>¿Buscás sumar talento junior con bases sólidas en sistemas?</h2>
-          <p>Estoy disponible para incorporarme a equipos de desarrollo backend, fullstack o IA aplicada en Córdoba o modalidad remota.</p>
+          <h2>¿Hablamos?</h2>
+          <a class="email" href="mailto:agusardiles2202@gmail.com?subject=Contacto%20profesional%20desde%20tu%20portafolio">agusardiles2202@gmail.com</a>
         </div>
-        <div class="contact-actions">
-          <a href="mailto:agusardiles2202@gmail.com" class="btn btn-primary">Enviar correo</a>
-          <button type="button" class="btn btn-outline-light" id="copyEmailFooter" data-email="agusardiles2202@gmail.com">
-            Copiar mail
-          </button>
-          <a href="assets/CV_Agustina_Ardiles.pdf" download="CV_Agustina_Ardiles.pdf" class="btn btn-outline-light">
-            Descargar CV
-          </a>
+        <div class="actions">
+          <a class="button button-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=agusardiles2202%40gmail.com&amp;su=Contacto+profesional+desde+tu+portafolio" target="_blank" rel="noopener noreferrer">Enviar correo por Gmail <span aria-hidden="true">↗</span></a>
+          <a class="button button-light" href="assets/CV_Agustina_Ardiles.pdf" download>Descargar CV <span aria-hidden="true">↓</span></a>
+          <a class="button button-light" href="https://www.linkedin.com/in/agustina-ardiles-183718378">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>Agustina Ardiles · Córdoba, Argentina</span>
-      <div class="footer-links">
-        <a href="https://github.com/agusardiles2202" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/agustina-ardiles-183718378" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:agusardiles2202@gmail.com">agusardiles2202@gmail.com</a>
-      </div>
-    </div>
+    <div class="shell footer-row"><span>Agustina Ardiles</span><a href="https://github.com/agusardiles2202">GitHub <span aria-hidden="true">↗</span></a><a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a></div>
   </footer>
 
-  <!-- CV Preview Modal -->
-  <div class="modal-backdrop" id="cvModal" hidden aria-hidden="true" role="dialog" aria-labelledby="cvModalTitle">
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <h2 id="cvModalTitle">Curriculum Vitae — Agustina Ardiles</h2>
-        <div class="modal-header-actions">
-          <a href="assets/CV_Agustina_Ardiles.pdf" download="CV_Agustina_Ardiles.pdf" class="btn btn-primary btn-sm">Descargar PDF</a>
-          <button type="button" class="btn btn-ghost btn-sm" id="closeCvBtn" aria-label="Cerrar vista previa">Cerrar</button>
-        </div>
-      </div>
-      <div class="modal-body">
-        <iframe src="assets/CV_Agustina_Ardiles.pdf" title="Vista previa del CV de Agustina Ardiles"></iframe>
-      </div>
+  <dialog id="media-dialog" aria-labelledby="media-title">
+    <div class="dialog-bar">
+      <h2 id="media-title">Vista del proyecto</h2>
+      <form method="dialog"><button class="button button-small button-outline" autofocus>Cerrar <span aria-hidden="true">×</span></button></form>
     </div>
-  </div>
-
-  <!-- Toast notification -->
-  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-
-  <script src="app.js"></script>
+    <img id="media-image" alt="">
+  </dialog>
 </body>
 </html>
