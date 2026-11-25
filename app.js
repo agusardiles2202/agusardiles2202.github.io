@@ -106,17 +106,20 @@ function renderChatLab() {
   const nodes = [
     {
       tag: "NODO 01 · LangGraph",
-      name: "memory_retrieval_node",
+      title: "Recuperación RAG",
+      fn: "memory_retrieval_node",
       console: `<span class="console-line-key">[ChromaDB · user_id="agustina"]</span> Buscando similitud semántica (k=3)...\n<span class="console-line-ok">✔ Recuerdo recuperado (importancia 5/5):</span> [profesional] "Prefiere Python y Java Spring Boot para arquitectura backend."\n<span class="console-line-ok">✔ Recuerdo recuperado (importancia 4/5):</span> [personal] "Cursa 4.º año de Ingeniería en Sistemas en UTN FRC."`
     },
     {
       tag: "NODO 02 · Gemini 2.5",
-      name: "conversation_node",
+      title: "Generación LLM",
+      fn: "conversation_node",
       console: `<span class="console-line-key">[trim_messages]</span> Ventana optimizada: 642 / 4000 tokens.\n<span class="console-line-key">[Prompt Dinámico]</span> Inyectando contexto recuperado en SystemMessage.\n<span class="console-line-ok">✔ Respuesta generada (Gemini 2.5 Flash):</span> "Para tu nuevo proyecto te sugiero Python con FastAPI/DAO o Java Spring Boot si buscás microservicios, aprovechando tu experiencia en UTN."`
     },
     {
       tag: "NODO 03 · Pydantic + SQLite",
-      name: "memory_extraction",
+      title: "Extracción Memoria",
+      fn: "memory_extraction",
       console: `<span class="console-line-key">[PydanticOutputParser]</span> Evaluando hechos nuevos de la conversación...\n<span class="console-line-ok">✔ ExtractedMemory(category="profesional", importance=4)</span> guardada en ChromaDB.\n<span class="console-line-ok">✔ Checkpoint thread_id="chat_01"</span> persistido en SQLiteSaver.`
     }
   ];
@@ -134,7 +137,8 @@ function renderChatLab() {
         ${nodes.map((n, idx) => `
           <button type="button" class="pipe-node ${idx === chatStep ? "active" : ""}" data-chat-step="${idx}">
             <span class="pipe-node-tag">${n.tag}</span>
-            <span class="pipe-node-name">${n.name}</span>
+            <span class="pipe-node-name">${n.title}</span>
+            <span class="pipe-node-fn">${n.fn}()</span>
           </button>
         `).join("")}
       </div>
