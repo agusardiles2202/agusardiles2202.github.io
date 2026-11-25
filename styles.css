@@ -206,9 +206,9 @@ button:focus-visible {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.75fr;
+  grid-template-columns: 1.65fr 0.5fr;
   gap: 44px;
-  align-items: center;
+  align-items: start;
 }
 
 .status-pill {
@@ -293,19 +293,21 @@ button:focus-visible {
 }
 
 .profile-photo-wrap {
-  width: 100%;
-  aspect-ratio: 4 / 4.2;
-  border-radius: var(--radius-md);
+  width: 80px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   background-color: #E2E8F0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .profile-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 15%;
   display: block;
 }
 
@@ -335,10 +337,12 @@ button:focus-visible {
   color: var(--ink-primary);
   cursor: pointer;
   margin-bottom: 12px;
+  text-decoration: none;
 }
 
 .copy-email-btn:hover {
   border-color: var(--accent);
+  color: var(--accent);
 }
 
 .copy-tag {
@@ -1052,4 +1056,59 @@ button:focus-visible {
   .contact-box {
     padding: 24px;
   }
+}
+
+/* Project preview screenshots */
+.project-screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+  border-radius: 0;
+}
+
+.lab-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-screenshot-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-blueprint);
+  background: var(--bg-blueprint);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.project-screenshot-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-screenshot-wrap:hover img {
+  transform: scale(1.03);
+}
+
+.screenshot-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 16px;
+  background: linear-gradient(to top, rgba(13,27,42,0.92), transparent);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  pointer-events: none;
 }
