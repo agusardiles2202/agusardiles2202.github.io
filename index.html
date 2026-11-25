@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agustina Ardiles — Ingeniería en Sistemas &amp; Desarrollo de Software</title>
+  <meta name="description" content="Portafolio de Agustina Ardiles, estudiante de 4.º año de Ingeniería en Sistemas (UTN FRC). Proyectos en Microservicios Java/Spring Boot, Python/Arquitectura de Objetos e Inteligencia Artificial con LangGraph y RAG.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand">
+        <span class="brand-mark">AA</span>
+        <span class="brand-name">Agustina Ardiles</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#formacion">Formación</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="nav-actions">
+        <button type="button" class="btn btn-ghost btn-sm" id="openCvBtn">Ver CV</button>
+        <a href="assets/CV_Agustina_Ardiles.pdf" download="CV_Agustina_Ardiles.pdf" class="btn btn-primary btn-sm">Descargar PDF</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="status-pill">
+            <span class="status-dot" aria-hidden="true"></span>
+            UTN FRC · 4.º año de Ingeniería en Sistemas · Córdoba, Argentina
+          </div>
+          <h1>Diseño sistemas backend, arquitectura limpia y aplicaciones con IA aplicada.</h1>
+          <p class="hero-lead">
+            Soy <strong>Agustina Ardiles</strong> (29 materias aprobadas en Ingeniería en Sistemas). Construyo software con foco en trazabilidad de negocio, seguridad y persistencia: desde microservicios en <strong>Java 21 + Spring Boot + Docker</strong> hasta agentes conversacionales con memoria vectorial en <strong>Python + LangGraph + ChromaDB</strong>.
+          </p>
+          <div class="hero-cta">
+            <a href="#proyectos" class="btn btn-primary">Explorar proyectos interactivos</a>
+            <a href="https://github.com/agusardiles2202" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+            <a href="https://www.linkedin.com/in/agustina-ardiles-183718378" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+          </div>
+          <dl class="hero-facts">
+            <div>
+              <dt>3 sistemas completos</dt>
+              <dd>IA / RAG, Arquitectura POO y Microservicios</dd>
+            </div>
+            <div>
+              <dt>181 tests automatizados</dt>
+              <dd>Cobertura unitaria e integración en Pytest</dd>
+            </div>
+            <div>
+              <dt>Inglés B2 (FCE)</dt>
+              <dd>Certificación Cambridge English</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="hero-profile">
+          <div class="profile-card">
+            <div class="profile-photo-wrap">
+              <img src="assets/agustina.jpg" alt="Agustina Ardiles" class="profile-photo">
+            </div>
+            <div class="profile-meta">
+              <h2>Agustina Ardiles</h2>
+              <p>Futura Ingeniera en Sistemas de Información</p>
+              <div class="profile-links">
+                <button type="button" class="copy-email-btn" id="copyEmailHero" data-email="agusardiles2202@gmail.com">
+                  agusardiles2202@gmail.com <span class="copy-tag">Copiar</span>
+                </button>
+              </div>
+              <div class="profile-focus">
+                <span>Backend Java &amp; Python</span>
+                <span>Microservicios &amp; Docker</span>
+                <span>Agentes IA &amp; RAG</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Interactive Architecture & Project Workbench -->
+    <section id="proyectos" class="workbench-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Proyectos &amp; Laboratorio de Arquitectura</h2>
+            <p class="section-sub">Seleccioná un sistema para revisar qué problema resuelve, su stack real y probar su flujo de funcionamiento en vivo.</p>
+          </div>
+          <div class="project-tabs" role="tablist" aria-label="Selector de proyectos">
+            <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-project="chat">
+              Chat Multiusuario IA
+            </button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-project="logistica">
+              Aplicación de Logística
+            </button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-project="microservicios">
+              Plataforma Microservicios
+            </button>
+          </div>
+        </div>
+
+        <div class="workbench-grid">
+          <!-- Left: Project Details -->
+          <article class="project-detail-card" id="projectDetailPanel">
+            <!-- Populated dynamically by app.js -->
+          </article>
+
+          <!-- Right: Interactive Lab -->
+          <div class="lab-shell" id="interactiveLab">
+            <!-- Populated dynamically by app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Explorer -->
+    <section id="tecnologias" class="stack-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Stack Tecnológico</h2>
+            <p class="section-sub">Herramientas, frameworks y estándares aplicados en mis desarrollos.</p>
+          </div>
+          <div class="filter-group" role="group" aria-label="Filtrar tecnologías">
+            <button type="button" class="filter-btn active" data-filter="all">Todas</button>
+            <button type="button" class="filter-btn" data-filter="backend">Backend &amp; Arquitectura</button>
+            <button type="button" class="filter-btn" data-filter="ia">IA &amp; Datos</button>
+            <button type="button" class="filter-btn" data-filter="infra">Seguridad, DB &amp; Testing</button>
+            <button type="button" class="filter-btn" data-filter="frontend">Frontend</button>
+          </div>
+        </div>
+
+        <div class="stack-grid" id="stackGrid">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="formacion" class="credentials-section">
+      <div class="container credentials-grid">
+        <div class="credential-col">
+          <h2>Formación Académica</h2>
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <h3>Ingeniería en Sistemas de Información</h3>
+              <span class="date-badge">2023 – Presente</span>
+            </div>
+            <p class="org-name">Universidad Tecnológica Nacional — Facultad Regional Córdoba (UTN FRC)</p>
+            <p class="cred-body">
+              Cursando <strong>4.º año</strong> con <strong>29 materias aprobadas</strong>. Sólida base en algoritmos, estructuras de datos, diseño y arquitectura de objetos, bases de datos relacionales, ingeniería de software y redes.
+            </p>
+          </div>
+        </div>
+
+        <div class="credential-col">
+          <h2>Certificaciones &amp; Idiomas</h2>
+          <div class="cert-list">
+            <div class="cert-item">
+              <div class="timeline-top">
+                <h3>LangChain, LangGraph y Agentes IA con Python</h3>
+                <span class="date-badge">Udemy · 2026</span>
+              </div>
+              <p class="cred-body">Sistemas RAG con ChromaDB, agentes autónomos, memoria persistente y modelos OpenAI / Google Gemini.</p>
+            </div>
+            <div class="cert-item">
+              <div class="timeline-top">
+                <h3>Curso de Python Avanzado</h3>
+                <span class="date-badge">Udemy · 2025</span>
+              </div>
+              <p class="cred-body">Programación orientada a objetos, estructuras avanzadas y buenas prácticas de desarrollo.</p>
+            </div>
+            <div class="cert-item">
+              <div class="timeline-top">
+                <h3>First Certificate in English (FCE — Nivel B2)</h3>
+                <span class="date-badge">Cambridge · 2021</span>
+              </div>
+              <p class="cred-body">Lectura fluida de documentación técnica, redacción y comunicación profesional en inglés.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contacto" class="contact-section">
+      <div class="container contact-box">
+        <div>
+          <h2>¿Buscás sumar talento junior con bases sólidas en sistemas?</h2>
+          <p>Estoy disponible para incorporarme a equipos de desarrollo backend, fullstack o IA aplicada en Córdoba o modalidad remota.</p>
+        </div>
+        <div class="contact-actions">
+          <a href="mailto:agusardiles2202@gmail.com" class="btn btn-primary">Enviar correo</a>
+          <button type="button" class="btn btn-outline-light" id="copyEmailFooter" data-email="agusardiles2202@gmail.com">
+            Copiar mail
+          </button>
+          <a href="assets/CV_Agustina_Ardiles.pdf" download="CV_Agustina_Ardiles.pdf" class="btn btn-outline-light">
+            Descargar CV
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Agustina Ardiles · Córdoba, Argentina</span>
+      <div class="footer-links">
+        <a href="https://github.com/agusardiles2202" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/agustina-ardiles-183718378" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:agusardiles2202@gmail.com">agusardiles2202@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CV Preview Modal -->
+  <div class="modal-backdrop" id="cvModal" hidden aria-hidden="true" role="dialog" aria-labelledby="cvModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 id="cvModalTitle">Curriculum Vitae — Agustina Ardiles</h2>
+        <div class="modal-header-actions">
+          <a href="assets/CV_Agustina_Ardiles.pdf" download="CV_Agustina_Ardiles.pdf" class="btn btn-primary btn-sm">Descargar PDF</a>
+          <button type="button" class="btn btn-ghost btn-sm" id="closeCvBtn" aria-label="Cerrar vista previa">Cerrar</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <iframe src="assets/CV_Agustina_Ardiles.pdf" title="Vista previa del CV de Agustina Ardiles"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
