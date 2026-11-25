@@ -138,7 +138,7 @@ function renderChatLab() {
           <button type="button" class="pipe-node ${idx === chatStep ? "active" : ""}" data-chat-step="${idx}">
             <span class="pipe-node-tag">${n.tag}</span>
             <span class="pipe-node-name">${n.title}</span>
-            <span class="pipe-node-fn">${n.fn}()</span>
+            <span class="pipe-node-fn">${n.fn}</span>
           </button>
         `).join("")}
       </div>
